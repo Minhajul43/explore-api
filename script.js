@@ -13,7 +13,7 @@ const LoadPost = () => {
         .then(res => res.json())
         .then(json => {
             console.log(json);
-            displayPost(json);
+            // displayPost(json);
         })
 };
 
@@ -21,7 +21,7 @@ const displayPost = (posts) => {
     // console.log(posts);
 
     posts.forEach(posts => {
-        console.log(posts);
+        // console.log(posts);
     });
 };
 

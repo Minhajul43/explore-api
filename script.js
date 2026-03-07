@@ -10,9 +10,20 @@
 const LoadPost = () => {
     const url = "https://jsonplaceholder.typicode.com/posts";
     fetch(url)
-    .then(res => res.json())
-    .then(json=>console.log(json))
-}
+        .then(res => res.json())
+        .then(json => {
+            console.log(json);
+            displayPost(json);
+        })
+};
+
+const displayPost = (posts) => {
+    // console.log(posts);
+
+    posts.forEach(posts => {
+        console.log(posts);
+    });
+};
 
 
 

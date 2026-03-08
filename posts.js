@@ -46,3 +46,36 @@ const LoadPost = () => {
 //   // })
 // };
 
+
+// {
+//     "userId": 10,
+//     "id": 94,
+//     "title": "qui qui voluptates illo iste minima",
+//     "body": "aspernatur expedita soluta quo ab ut similique\nexpedita dolores amet\nsed temporibus distinctio magnam saepe deleniti\nomnis facilis nam ipsum natus sint similique omnis"
+// }
+
+// {
+//     "userId": 10,
+//     "id": 94,
+//     "title": "qui qui voluptates illo iste minima",
+//     "body": "aspernatur expedita soluta quo ab ut similique\nexpedita dolores amet\nsed temporibus distinctio magnam saepe deleniti\nomnis facilis nam ipsum natus sint similique omnis"
+// }
+const displayPost = (posts) => {
+  // get the container and clear the container
+
+  const postContainer = document.getElementById('post-container');
+  postContainer.innerHTML = "";// Create empty in previous data and load new data
+  posts.forEach(post => {
+
+    const postCard = document.createElement("div");
+    postCard.innerHTML = `
+      <div class="post-card">
+      <h2>${post.title}</h2>
+      <p>${post.body}</p>
+    </div>`;
+
+    postContainer.append(postCard);
+  });
+};
+ 
+LoadPost();

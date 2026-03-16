@@ -8,7 +8,8 @@ const loadPost = () => {
 };
 const displayPost = (posts) => {
   console.log(posts);
-  for (const post of posts) {
-    console.log(post);
-  }
+  posts.forEach(post => {
+    console.log(post.id);
+  })
 };
+// displayPost();

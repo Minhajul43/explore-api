@@ -21,6 +21,9 @@ const displayPost=(todos) => {
     todoCard.innerHTML = `
     <div class="todo-card">
     <p>${todos.id}</p>
+    <p> ${todos.completed == true
+      ?'<i class="fa-regular fa-square-check"></i>'
+      : '<i class="fa-solid fa-square-check"></i>'} </p>
     <h3>${todos.title}</h3>
     </div>
     `;

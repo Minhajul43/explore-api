@@ -9,7 +9,7 @@ const loadPost = () => {
 const displayPost = (posts) => {
   console.log(posts);
   posts.forEach(post => {
-    console.log(post.id);
+    console.log(post.title);
   })
 };
 // displayPost();

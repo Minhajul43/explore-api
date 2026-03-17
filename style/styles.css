@@ -18,3 +18,20 @@
 .post-card p{
   text-align: justify;
 }
+
+#todos-container{
+  max-width: 1160px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10px;
+  row-gap: 30px;
+}
+
+.todo-card{
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px gray;
+  height: 100%;
+}

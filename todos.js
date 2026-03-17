@@ -11,13 +11,21 @@ const loadTodos = () => {
 // "completed": false
 
 const displayPost=(todos) => {
-  const section = document.getElementById('todos');
-  section.innerHTML = todos.map(todo => `
-    <div>
-      <h3>${todo.title}</h3>
-      <p>${todo.completed ? 'Completed' : 'Not completed'}</p>
+  const todosContainer  = document.getElementById('todos-container');
+  todosContainer.innerHTML = '';
+  
+  todos.forEach(todos => {
+    console.log(todos);
+   
+    let todoCard = document.createElement("div");
+    todoCard.innerHTML = `
+    <div class="todo-card">
+    <p>${todos.id}</p>
+    <h3>${todos.title}</h3>
     </div>
-  `).join('');
+    `;
+    todosContainer.append(todoCard);
+  });
 };
 
 loadTodos();
